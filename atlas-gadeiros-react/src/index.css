@@ -3,15 +3,45 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /* Grain / noise texture overlay */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+
   #root {
     width: 100%;
     min-height: 100vh;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0e0e0e;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #c9a84c;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e6c364;
   }
 
   .material-symbols-outlined {
@@ -27,5 +57,48 @@
     word-wrap: normal;
     direction: ltr;
     -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  /* Subtle gold glow for hero/accent elements */
+  .gold-glow {
+    box-shadow: 0 0 30px rgba(201, 168, 76, 0.12);
+  }
+
+  /* Gold shimmer border animation */
+  .border-gold-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  .border-gold-shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e6c364, transparent);
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 200%; }
+  }
+
+  /* Clip reveal for hero lines */
+  .clip-reveal {
+    overflow: hidden;
+    display: block;
+  }
+
+  /* Gold pulse on active elements */
+  @keyframes gold-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+  .gold-pulse {
+    animation: gold-pulse 2.5s ease-in-out infinite;
   }
 }
