@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services - Atlas &amp; Gadeiros</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-dim": "#131313",
+                        "on-tertiary": "#313030",
+                        "error": "#ffb4ab",
+                        "surface-variant": "#353534",
+                        "primary-fixed": "#ffe08f",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#503d00",
+                        "secondary": "#c8c6c5",
+                        "on-background": "#e5e2e1",
+                        "tertiary-container": "#adabab",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "on-primary-fixed": "#241a00",
+                        "on-secondary": "#313030",
+                        "on-surface-variant": "#d0c5b2",
+                        "outline-variant": "#4d4637",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-primary": "#755b00",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "on-error-container": "#ffdad6",
+                        "on-error": "#690005",
+                        "surface-container": "#201f1f",
+                        "surface-container-high": "#2a2a2a",
+                        "surface": "#131313",
+                        "tertiary-fixed": "#e5e2e1",
+                        "tertiary": "#c9c6c6",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary": "#3d2e00",
+                        "inverse-on-surface": "#313030",
+                        "surface-tint": "#e6c364",
+                        "secondary-container": "#474746",
+                        "on-secondary-fixed-variant": "#474746",
+                        "background": "#131313",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary-container": "#b7b5b4",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-tertiary-container": "#40403f",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "surface-bright": "#3a3939",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "primary": "#e6c364",
+                        "on-primary-fixed-variant": "#584400",
+                        "outline": "#99907e",
+                        "primary-fixed-dim": "#e6c364",
+                        "surface-container-highest": "#353534",
+                        "primary-container": "#c9a84c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "80px",
+                        "container-max": "1440px",
+                        "stack-md": "24px",
+                        "margin": "64px",
+                        "gutter": "24px",
+                        "stack-sm": "8px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Anton"],
+                        "label-caps": ["Inter"],
+                        "display-xl": ["Anton"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Anton"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "160%", "letterSpacing": "0", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "120%", "letterSpacing": "0.04em", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "100%", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "display-xl": ["96px", {"lineHeight": "100%", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "160%", "letterSpacing": "0", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "110%", "letterSpacing": "0.04em", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #0A0A0A; color: #e5e2e1; }
+        .bg-level-0 { background-color: #0A0A0A; }
+        .bg-level-1 { background-color: #141414; }
+        .bg-level-2 { background-color: #1C1C1C; }
+        .border-gold { border-color: #C9A84C; }
+        .border-subtle { border-color: #2A2A2A; }
+        .text-gold { color: #C9A84C; }
+        /* Map tailwind active nav to gold underline */
+        .nav-active { border-bottom: 2px solid #C9A84C; color: #C9A84C !important; padding-bottom: 2px; }
+    </style>
+</head>
+<body class="bg-level-0 min-h-screen flex flex-col font-body-md text-body-md selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 border-b border-primary/20 bg-background/95 backdrop-blur-sm">
+<div class="flex justify-between items-center h-20 px-margin max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary tracking-tight">
+                ATLAS &amp; GADEIROS
+            </div>
+<div class="hidden md:flex gap-8 items-center font-label-caps text-label-caps uppercase">
+<a class="text-on-background hover:text-primary transition-colors duration-300" href="#">About</a>
+<a class="nav-active text-primary border-b-2 border-primary pb-1" href="#">Services</a>
+<a class="text-on-background hover:text-primary transition-colors duration-300" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-surface-container-lowest font-headline-md px-6 py-2 uppercase hover:bg-primary-fixed-dim transition-colors hidden md:block">
+                Enquire
+            </button>
+<!-- Mobile Menu Icon -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-[120px] pb-stack-lg">
+<!-- Page Hero -->
+<section class="max-w-container-max mx-auto px-margin py-stack-lg border-b border-subtle">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8">
+<h1 class="font-display-xl text-display-xl text-on-background uppercase mb-stack-md">CORE DISCIPLINES</h1>
+</div>
+<div class="md:col-span-4 flex items-end">
+<p class="font-body-lg text-body-lg text-on-surface-variant border-l border-gold pl-4 py-2">
+                        Specialized services for clubs, athletes, and football organizations seeking strategic advantage.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Football Advisory Section -->
+<section class="max-w-container-max mx-auto px-margin py-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-6 pr-0 md:pr-12">
+<div class="inline-block bg-level-2 border border-subtle px-3 py-1 mb-6">
+<span class="font-label-caps text-label-caps text-gold uppercase tracking-widest">Advisory</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-background uppercase mb-6">Football Advisory</h2>
+<div class="space-y-6 text-on-surface-variant">
+<p>We provide discreet, high-level counsel to club ownership groups navigating complex transitions or seeking to restructure their sporting operations for sustained success.</p>
+<p>Our advisory extends to Sporting Directors, offering a neutral, expert sounding board for squad architecture, technical staff appointments, and long-term philosophical alignment.</p>
+<p>For executive boards, we deliver objective analyses of current sporting structures, identifying inefficiencies and proposing rigorous, modern frameworks tailored to the club's specific context and ambitions.</p>
+</div>
+</div>
+<div class="md:col-span-5 md:col-start-8 flex flex-col justify-center border-t border-gold bg-level-1 p-8 mt-8 md:mt-0">
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-8 tracking-widest">Key Deliverables</h3>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-gold mt-1" data-icon="check_circle">check_circle</span>
+<span class="font-body-lg text-body-lg">Strategic Ownership Reviews</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-gold mt-1" data-icon="check_circle">check_circle</span>
+<span class="font-body-lg text-body-lg">Technical Director Mentorship</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-gold mt-1" data-icon="check_circle">check_circle</span>
+<span class="font-body-lg text-body-lg">Board-level Sporting Audits</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-gold mt-1" data-icon="check_circle">check_circle</span>
+<span class="font-body-lg text-body-lg">M&amp;A Sporting Due Diligence</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Sports Consulting Section (Mirror Layout) -->
+<section class="max-w-container-max mx-auto px-margin py-stack-lg border-t border-subtle bg-level-1">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Image/Visual abstraction placeholder left -->
+<div class="md:col-span-5 flex flex-col justify-center border-t border-gold bg-level-0 p-8 order-2 md:order-1 mt-8 md:mt-0 relative overflow-hidden group">
+<!-- Abstract visual representation -->
+<div class="absolute inset-0 opacity-20 pointer-events-none bg-[url('https://images.unsplash.com/photo-1518605368461-1e1e1a8a25c3?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80')] bg-cover bg-center mix-blend-luminosity grayscale" data-alt="A highly detailed abstract visual representation of complex data and strategy networks. Thin, glowing gold lines connect nodes against a deep black void, signifying sophisticated intelligence and structural analysis. The mood is precise, modern, and elite, fitting a high-end corporate sports consultancy in dark mode."></div>
+<div class="relative z-10">
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-8 tracking-widest">Core Capabilities</h3>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-gold mt-1" data-icon="analytics">analytics</span>
+<span class="font-body-lg text-body-lg">Advanced Data Analysis</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-gold mt-1" data-icon="radar">radar</span>
+<span class="font-body-lg text-body-lg">Pitch Intelligence</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-gold mt-1" data-icon="person_search">person_search</span>
+<span class="font-body-lg text-body-lg">Recruitment Optimization</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-gold mt-1" data-icon="fact_check">fact_check</span>
+<span class="font-body-lg text-body-lg">Operational Auditing</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:col-span-6 md:col-start-7 pl-0 md:pl-12 order-1 md:order-2">
+<div class="inline-block bg-level-2 border border-subtle px-3 py-1 mb-6">
+<span class="font-label-caps text-label-caps text-gold uppercase tracking-widest">Consulting</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-background uppercase mb-6">Sports Consulting</h2>
+<div class="space-y-6 text-on-surface-variant">
+<p>We leverage cutting-edge analytical tools and deep domain expertise to provide actionable intelligence that drives competitive advantage on the pitch.</p>
+<p>Our consulting services dive deep into recruitment optimization, ensuring that a club's talent acquisition strategy is aligned with both financial realities and tactical identity. We audit existing processes to identify blind spots in scouting networks.</p>
+<p>Through comprehensive operational auditing, we stress-test internal workflows, from academy integration to first-team logistics, recommending precise interventions that elevate overall organizational performance.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Sports Management Section -->
+<section class="max-w-container-max mx-auto px-margin py-stack-lg border-t border-subtle">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8">
+<div class="inline-block bg-level-2 border border-subtle px-3 py-1 mb-6">
+<span class="font-label-caps text-label-caps text-gold uppercase tracking-widest">Management</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-background uppercase mb-6">Sports Management</h2>
+<div class="space-y-6 text-on-surface-variant max-w-3xl">
+<p>Beyond institutional advisory, we offer a boutique management service for elite athletes who require a comprehensive, strategic approach to their careers. We act as architects of an athlete's professional journey.</p>
+<p>This encompasses rigorous contract negotiation designed to maximize both immediate value and long-term security, coupled with sophisticated brand positioning that resonates with premium commercial partners.</p>
+<p>Crucially, we integrate post-career planning from day one, ensuring that our clients are positioned for seamless transitions into ownership, executive roles, or strategic investments once their playing days conclude.</p>
+</div>
+</div>
+<div class="md:col-span-4 flex flex-col justify-end gap-4 mt-8 md:mt-0 border-l border-subtle pl-8">
+<!-- Management Chips -->
+<div class="bg-level-2 border border-subtle px-4 py-3">
+<span class="font-label-caps text-label-caps text-gold uppercase">Athlete Representation</span>
+</div>
+<div class="bg-level-2 border border-subtle px-4 py-3">
+<span class="font-label-caps text-label-caps text-gold uppercase">Contract Negotiation</span>
+</div>
+<div class="bg-level-2 border border-subtle px-4 py-3">
+<span class="font-label-caps text-label-caps text-gold uppercase">Brand Positioning</span>
+</div>
+<div class="bg-level-2 border border-subtle px-4 py-3">
+<span class="font-label-caps text-label-caps text-gold uppercase">Post-Career Planning</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="bg-surface-container-lowest py-stack-lg border-y border-subtle">
+<div class="max-w-container-max mx-auto px-margin">
+<h2 class="font-headline-lg text-headline-lg text-on-background uppercase mb-stack-md text-center">HOW WE WORK</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+<!-- Connecting line for desktop -->
+<div class="hidden md:block absolute top-[24px] left-0 w-full h-[1px] bg-subtle border-t border-subtle z-0"></div>
+<!-- Step 1 -->
+<div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left">
+<div class="w-12 h-12 bg-level-0 border border-gold flex items-center justify-center font-headline-md text-gold mb-6">
+                            01
+                        </div>
+<h4 class="font-headline-md text-xl uppercase mb-3">Initial Consultation</h4>
+<p class="text-on-surface-variant font-body-md text-sm">A confidential, high-level discussion to understand the core mandate, identify critical pressure points, and establish parameters.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left mt-8 md:mt-0">
+<div class="w-12 h-12 bg-level-0 border border-gold flex items-center justify-center font-headline-md text-gold mb-6">
+                            02
+                        </div>
+<h4 class="font-headline-md text-xl uppercase mb-3">Diagnostic Assessment</h4>
+<p class="text-on-surface-variant font-body-md text-sm">Rigorous analysis combining proprietary data metrics with deep-dive qualitative audits of existing structures and personnel.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left mt-8 md:mt-0">
+<div class="w-12 h-12 bg-level-0 border border-gold flex items-center justify-center font-headline-md text-gold mb-6">
+                            03
+                        </div>
+<h4 class="font-headline-md text-xl uppercase mb-3">Strategic Design</h4>
+<p class="text-on-surface-variant font-body-md text-sm">Formulation of bespoke architectural solutions, operational frameworks, and actionable intelligence ready for implementation.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left mt-8 md:mt-0">
+<div class="w-12 h-12 bg-level-0 border border-gold flex items-center justify-center font-headline-md text-gold mb-6">
+                            04
+                        </div>
+<h4 class="font-headline-md text-xl uppercase mb-3">Ongoing Execution</h4>
+<p class="text-on-surface-variant font-body-md text-sm">Continuous advisory support, monitoring of strategic implementation, and dynamic recalibration as market conditions evolve.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-container-max mx-auto px-margin py-stack-lg text-center flex flex-col items-center justify-center min-h-[409px]">
+<h2 class="font-headline-lg text-headline-lg text-on-background uppercase mb-8">Every mandate is bespoke.</h2>
+<button class="bg-primary-container text-surface-container-lowest font-headline-md px-10 py-4 uppercase hover:bg-primary-fixed-dim transition-colors">
+                REQUEST A CONSULTATION
+            </button>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full py-stack-lg border-t border-outline-variant">
+<div class="flex flex-col items-center text-center gap-stack-md px-margin max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg text-primary dark:text-primary">
+                ATLAS &amp; GADEIROS
+            </div>
+<div class="flex flex-wrap justify-center gap-6 font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">About</a>
+<a class="text-primary opacity-80 hover:opacity-100" href="#">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Strategic Advisory</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Executive Search</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Contact</a>
+</div>
+<div class="text-on-surface-variant font-label-caps text-label-caps uppercase mt-8 tracking-widest text-xs opacity-50">
+                © 2024 ATLAS &amp; GADEIROS SPORTS GROUP. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+</body></html>

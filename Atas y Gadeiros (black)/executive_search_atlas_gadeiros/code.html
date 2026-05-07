@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Executive Search - ATLAS &amp; GADEIROS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed": "#e5e2e1",
+                      "surface-dim": "#131313",
+                      "on-tertiary": "#313030",
+                      "error": "#ffb4ab",
+                      "surface-variant": "#353534",
+                      "primary-fixed": "#ffe08f",
+                      "error-container": "#93000a",
+                      "on-primary-container": "#503d00",
+                      "secondary": "#c8c6c5",
+                      "on-background": "#e5e2e1",
+                      "tertiary-container": "#adabab",
+                      "on-surface": "#e5e2e1",
+                      "on-secondary-fixed": "#1b1b1b",
+                      "on-primary-fixed": "#241a00",
+                      "on-secondary": "#313030",
+                      "on-surface-variant": "#d0c5b2",
+                      "outline-variant": "#4d4637",
+                      "surface-container-lowest": "#0e0e0e",
+                      "inverse-primary": "#755b00",
+                      "on-tertiary-fixed-variant": "#474646",
+                      "on-error-container": "#ffdad6",
+                      "on-error": "#690005",
+                      "surface-container": "#201f1f",
+                      "surface-container-high": "#2a2a2a",
+                      "surface": "#131313",
+                      "tertiary-fixed": "#e5e2e1",
+                      "tertiary": "#c9c6c6",
+                      "surface-container-low": "#1c1b1b",
+                      "on-primary": "#3d2e00",
+                      "inverse-on-surface": "#313030",
+                      "surface-tint": "#e6c364",
+                      "secondary-container": "#474746",
+                      "on-secondary-fixed-variant": "#474746",
+                      "background": "#131313",
+                      "inverse-surface": "#e5e2e1",
+                      "on-secondary-container": "#b7b5b4",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "on-tertiary-container": "#40403f",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "surface-bright": "#3a3939",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "primary": "#e6c364",
+                      "on-primary-fixed-variant": "#584400",
+                      "outline": "#99907e",
+                      "primary-fixed-dim": "#e6c364",
+                      "surface-container-highest": "#353534",
+                      "primary-container": "#c9a84c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-lg": "80px",
+                      "container-max": "1440px",
+                      "stack-md": "24px",
+                      "margin": "64px",
+                      "gutter": "24px",
+                      "stack-sm": "8px",
+                      "unit": "4px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Anton"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "display-xl": [
+                              "Anton"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Anton"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "160%",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "120%",
+                                      "letterSpacing": "0.04em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-xl": [
+                              "96px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "160%",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "110%",
+                                      "letterSpacing": "0.04em",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #0A0A0A;
+            color: #e5e2e1;
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 border-b border-primary/20 bg-background/95 backdrop-blur-sm hidden md:block">
+<div class="flex justify-between items-center h-20 px-margin max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-primary tracking-tight">ATLAS &amp; GADEIROS</div>
+<ul class="flex gap-stack-md font-label-caps text-label-caps uppercase">
+<li><a class="text-on-background hover:text-primary transition-colors duration-300" href="#">About</a></li>
+<li><a class="text-on-background hover:text-primary transition-colors duration-300" href="#">Services</a></li>
+<li><a class="text-primary border-b-2 border-primary pb-1" href="#">Executive Search</a></li>
+<li><a class="text-on-background hover:text-primary transition-colors duration-300" href="#">Contact</a></li>
+</ul>
+<button class="bg-primary-container text-on-primary-fixed uppercase font-headline-md text-[16px] tracking-widest px-6 py-3 rounded-none hover:bg-primary-fixed transition-colors">Enquire</button>
+</div>
+</nav>
+<main class="pt-32 pb-stack-lg max-w-container-max mx-auto px-margin space-y-stack-lg">
+<!-- Page Hero -->
+<header class="grid grid-cols-12 gap-gutter pt-stack-lg pb-stack-lg border-b border-surface-container-high">
+<div class="col-span-12 md:col-span-8">
+<h1 class="font-display-xl text-display-xl text-on-background uppercase mb-6">EXECUTIVE SEARCH</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Identifying and placing elite football leadership across clubs, federations, and organizations.</p>
+</div>
+<div class="col-span-12 md:col-span-4 flex items-end justify-end hidden md:flex">
+<div class="w-16 h-[1px] bg-primary-container"></div>
+</div>
+</header>
+<!-- The Challenge -->
+<section class="max-w-3xl mx-auto text-center py-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary mb-8 uppercase">The Challenge</h2>
+<div class="font-body-lg text-body-lg text-on-background space-y-6">
+<p>Finding the right football executive is a complex undertaking. The modern game requires leaders who possess not only a profound understanding of football operations but also the commercial acumen to navigate a highly scrutinized, globalized industry. It demands vision, absolute discretion, and a proven track record of strategic execution under pressure.</p>
+<p>We leverage our clandestine network and rigorous assessment methodologies to identify individuals capable of transforming organizational structures. Our focus is on placing visionaries who align perfectly with the specific cultural and strategic ambitions of our elite clientele.</p>
+</div>
+</section>
+<!-- What We Place -->
+<section class="py-stack-lg">
+<h2 class="font-headline-md text-headline-md text-on-background uppercase mb-12 flex items-center gap-4">
+                What We Place
+                <span class="h-[1px] flex-grow bg-surface-container-high"></span>
+</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-gutter">
+<!-- Card 1 -->
+<div class="bg-surface-container-low border-t border-primary-container p-8 hover:bg-surface-container transition-colors group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6" data-icon="sports_soccer" data-weight="fill" style="font-variation-settings: 'FILL' 1;">sports_soccer</span>
+<h3 class="font-headline-md text-[24px] text-on-background uppercase mb-4">Sporting Directors</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Architects of football strategy, talent acquisition, and long-term sporting vision.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low border-t border-primary-container p-8 hover:bg-surface-container transition-colors group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6" data-icon="group" data-weight="fill" style="font-variation-settings: 'FILL' 1;">group</span>
+<h3 class="font-headline-md text-[24px] text-on-background uppercase mb-4">Head Coaches</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Tactical leaders capable of managing elite squads and delivering immediate results.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 3 -->
+<div class="bg-surface-container-low p-8 border border-surface-container-high hover:border-outline-variant transition-colors">
+<span class="material-symbols-outlined text-primary-container text-3xl mb-4" data-icon="business_center" data-weight="fill" style="font-variation-settings: 'FILL' 1;">business_center</span>
+<h3 class="font-headline-md text-[20px] text-on-background uppercase mb-2">Club CEOs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Executive leaders driving commercial growth and operational excellence.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-low p-8 border border-surface-container-high hover:border-outline-variant transition-colors">
+<span class="material-symbols-outlined text-primary-container text-3xl mb-4" data-icon="architecture" data-weight="fill" style="font-variation-settings: 'FILL' 1;">architecture</span>
+<h3 class="font-headline-md text-[20px] text-on-background uppercase mb-2">Technical Coordinators</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Liaisons between the boardroom, coaching staff, and playing squad.</p>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-low p-8 border border-surface-container-high hover:border-outline-variant transition-colors">
+<span class="material-symbols-outlined text-primary-container text-3xl mb-4" data-icon="school" data-weight="fill" style="font-variation-settings: 'FILL' 1;">school</span>
+<h3 class="font-headline-md text-[20px] text-on-background uppercase mb-2">Academy Directors</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Visionaries dedicated to the development of youth talent and club methodology.</p>
+</div>
+</div>
+</section>
+<!-- Our Search Process -->
+<section class="py-stack-lg border-t border-surface-container-high">
+<div class="grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-4">
+<h2 class="font-headline-lg text-headline-lg text-on-background uppercase sticky top-32">Our Search Process</h2>
+</div>
+<div class="col-span-12 md:col-span-8 relative">
+<div class="absolute left-[23px] top-4 bottom-4 w-[1px] bg-surface-container-high"></div>
+<div class="space-y-12">
+<!-- Step 1 -->
+<div class="flex gap-8 relative z-10">
+<div class="w-12 h-12 rounded-full bg-surface-container border border-primary-container flex items-center justify-center flex-shrink-0 text-primary-container font-headline-md text-[20px]">1</div>
+<div class="pt-2">
+<h3 class="font-headline-md text-[24px] text-on-background uppercase mb-2">Define Profile</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Rigorous consultation to establish exact requirements, cultural fit, and strategic objectives.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-8 relative z-10">
+<div class="w-12 h-12 rounded-full bg-surface-container border border-primary-container flex items-center justify-center flex-shrink-0 text-primary-container font-headline-md text-[20px]">2</div>
+<div class="pt-2">
+<h3 class="font-headline-md text-[24px] text-on-background uppercase mb-2">Market Mapping</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Comprehensive analysis of the global executive landscape to identify high-potential targets.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex gap-8 relative z-10">
+<div class="w-12 h-12 rounded-full bg-surface-container border border-primary-container flex items-center justify-center flex-shrink-0 text-primary-container font-headline-md text-[20px]">3</div>
+<div class="pt-2">
+<h3 class="font-headline-md text-[24px] text-on-background uppercase mb-2">Candidate Approach</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Discreet and targeted engagement with prospective leaders.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex gap-8 relative z-10">
+<div class="w-12 h-12 rounded-full bg-surface-container border border-primary-container flex items-center justify-center flex-shrink-0 text-primary-container font-headline-md text-[20px]">4</div>
+<div class="pt-2">
+<h3 class="font-headline-md text-[24px] text-on-background uppercase mb-2">Evaluation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">In-depth assessment of strategic capabilities, track record, and cultural alignment.</p>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="flex gap-8 relative z-10">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center flex-shrink-0 text-on-primary-fixed font-headline-md text-[20px]">5</div>
+<div class="pt-2">
+<h3 class="font-headline-md text-[24px] text-primary-container uppercase mb-2">Placement &amp; Onboarding</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Facilitation of negotiations and structured integration into the new organization.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Discretion Clause -->
+<section class="bg-surface-container-low py-8 px-margin text-center border-y border-surface-container-high my-stack-lg">
+<p class="font-body-lg text-body-lg text-outline italic">"All searches are conducted with absolute confidentiality."</p>
+</section>
+<!-- CTA -->
+<section class="py-stack-lg text-center bg-surface-dim border border-surface-container-high p-margin">
+<h2 class="font-headline-lg text-headline-lg text-on-background uppercase mb-8">Looking for your next football leader?</h2>
+<button class="bg-primary-container text-on-primary-fixed uppercase font-headline-md text-[18px] tracking-widest px-10 py-4 rounded-none hover:bg-primary-fixed transition-colors inline-flex items-center gap-2">
+                SUBMIT A SEARCH MANDATE
+                <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg border-t border-outline-variant bg-surface-container-lowest flex flex-col items-center text-center gap-stack-md px-margin max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg text-primary">ATLAS &amp; GADEIROS</div>
+<ul class="flex flex-wrap justify-center gap-6 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">About</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Services</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Strategic Advisory</a></li>
+<li><a class="text-primary hover:text-primary transition-colors" href="#">Executive Search</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+<div class="font-body-md text-body-md text-on-surface-variant opacity-80 mt-8">
+            © 2024 ATLAS &amp; GADEIROS SPORTS GROUP. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+</body></html>

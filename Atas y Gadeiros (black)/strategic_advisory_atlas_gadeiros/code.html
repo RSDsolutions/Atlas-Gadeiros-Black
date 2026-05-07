@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Strategic Advisory | Atlas &amp; Gadeiros</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-dim": "#131313",
+                        "on-tertiary": "#313030",
+                        "error": "#ffb4ab",
+                        "surface-variant": "#353534",
+                        "primary-fixed": "#ffe08f",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#503d00",
+                        "secondary": "#c8c6c5",
+                        "on-background": "#e5e2e1",
+                        "tertiary-container": "#adabab",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "on-primary-fixed": "#241a00",
+                        "on-secondary": "#313030",
+                        "on-surface-variant": "#d0c5b2",
+                        "outline-variant": "#4d4637",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-primary": "#755b00",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "on-error-container": "#ffdad6",
+                        "on-error": "#690005",
+                        "surface-container": "#201f1f",
+                        "surface-container-high": "#2a2a2a",
+                        "surface": "#131313",
+                        "tertiary-fixed": "#e5e2e1",
+                        "tertiary": "#c9c6c6",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary": "#3d2e00",
+                        "inverse-on-surface": "#313030",
+                        "surface-tint": "#e6c364",
+                        "secondary-container": "#474746",
+                        "on-secondary-fixed-variant": "#474746",
+                        "background": "#131313",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary-container": "#b7b5b4",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-tertiary-container": "#40403f",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "surface-bright": "#3a3939",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "primary": "#e6c364",
+                        "on-primary-fixed-variant": "#584400",
+                        "outline": "#99907e",
+                        "primary-fixed-dim": "#e6c364",
+                        "surface-container-highest": "#353534",
+                        "primary-container": "#c9a84c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "80px",
+                        "container-max": "1440px",
+                        "stack-md": "24px",
+                        "margin": "64px",
+                        "gutter": "24px",
+                        "stack-sm": "8px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Anton"],
+                        "label-caps": ["Inter"],
+                        "display-xl": ["Anton"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Anton"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "160%", "letterSpacing": "0", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "letterSpacing": "0.04em", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "100%", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "display-xl": ["96px", { "lineHeight": "100%", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "160%", "letterSpacing": "0", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "110%", "letterSpacing": "0.04em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 border-b border-primary/20 bg-background/95 backdrop-blur-sm">
+<div class="flex justify-between items-center h-20 px-margin max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-primary tracking-tight uppercase">
+                ATLAS &amp; GADEIROS
+            </div>
+<nav class="hidden md:flex items-center gap-gutter">
+<a class="font-label-caps text-label-caps uppercase text-on-background hover:text-primary transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="#">About</a>
+<a class="font-label-caps text-label-caps uppercase text-primary border-b-2 border-primary pb-1 scale-95 active:scale-90 transition-transform" href="#">Services</a>
+<a class="font-label-caps text-label-caps uppercase text-on-background hover:text-primary transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-stack-sm">
+<button class="bg-primary-container text-on-primary-container font-headline-md text-headline-md uppercase px-6 py-2 hover:bg-primary-fixed-dim transition-all scale-95 active:scale-90 transition-transform text-lg">
+                    Enquire
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-stack-lg">
+<!-- Page Hero -->
+<section class="px-margin max-w-container-max mx-auto py-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-10">
+<h1 class="font-display-xl text-display-xl text-on-surface uppercase mb-stack-md">
+                        STRATEGIC ADVISORY
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl border-l-2 border-primary-container pl-stack-sm">
+                        Long-term thinking. Discreet execution. Measurable outcomes.
+                    </p>
+</div>
+</div>
+</section>
+<!-- What Is Strategic Advisory -->
+<section class="px-margin max-w-container-max mx-auto py-stack-lg border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 pr-0 md:pr-12">
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase mb-stack-md">Defining the Future State</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-sm">
+                        In an industry driven by immediate results and constant volatility, true competitive advantage is forged through structural clarity and disciplined foresight. Our Strategic Advisory practice does not deal in superficial fixes; we re-architect the fundamental pillars of sporting and commercial operations.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        We operate as a shadow board for elite decision-makers, providing unvarnished analysis, bespoke operational blueprints, and the clandestine execution necessary to transform ambition into sustained institutional dominance.
+                    </p>
+</div>
+<div class="md:col-span-6 bg-surface-container p-stack-md border border-outline-variant">
+<h3 class="font-headline-md text-headline-md text-primary-container uppercase mb-stack-md">Core Principles</h3>
+<ul class="flex flex-col gap-stack-sm">
+<li class="flex items-start gap-stack-sm border-b border-surface-container-high pb-stack-sm">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">target</span>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface block mb-unit">Structural Alignment</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Synchronizing sporting philosophy with financial realities.</span>
+</div>
+</li>
+<li class="flex items-start gap-stack-sm border-b border-surface-container-high pb-stack-sm">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">visibility_off</span>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface block mb-unit">Absolute Discretion</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Operating below the radar to protect institutional leverage.</span>
+</div>
+</li>
+<li class="flex items-start gap-stack-sm">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">architecture</span>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface block mb-unit">Bespoke Architecture</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Rejecting templated solutions for highly customized frameworks.</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Advisory Areas -->
+<section class="px-margin max-w-container-max mx-auto py-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase mb-stack-lg">Advisory Verticals</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="bg-surface-container-low p-stack-md border-t border-primary-container flex flex-col gap-stack-sm">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-unit">account_tree</span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">Club Structuring</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Comprehensive organizational redesign. We define reporting lines, departmental scopes, and communication protocols between the board, sporting director, and first-team staff to eliminate friction and maximize resource efficiency.
+                    </p>
+</div>
+<div class="bg-surface-container-low p-stack-md border-t border-primary-container flex flex-col gap-stack-sm">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-unit">swap_horiz</span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">Transfer Strategy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Data-informed squad planning decoupled from emotional bias. We establish robust recruitment frameworks, succession planning models, and global network strategies to ensure long-term squad value appreciation.
+                    </p>
+</div>
+<div class="bg-surface-container-low p-stack-md border-t border-primary-container flex flex-col gap-stack-sm">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-unit">groups</span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">Coaching Staff Advisory</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Evaluating, profiling, and selecting elite technical staff. We ensure stylistic alignment between head coaches, technical directors, and the overarching club philosophy, mitigating the risk of volatile managerial transitions.
+                    </p>
+</div>
+<div class="bg-surface-container-low p-stack-md border-t border-primary-container flex flex-col gap-stack-sm">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-unit">storefront</span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">Commercial Positioning</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Bridging the gap between on-pitch performance and off-pitch revenue. We advise on brand architecture, global market entry, and high-value partnership alignment tailored to elite sporting entities.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Who We Serve -->
+<section class="px-margin max-w-container-max mx-auto py-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase mb-stack-lg text-center">Institutional Focus</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-surface-container border border-surface-container-high p-stack-md text-center flex flex-col items-center">
+<div class="w-16 h-1 bg-primary-container mb-stack-sm"></div>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-stack-sm">Football Clubs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        From established Champions League institutions requiring marginal gains, to ambitious projects needing comprehensive structural overhaul.
+                    </p>
+</div>
+<div class="bg-surface-container border border-surface-container-high p-stack-md text-center flex flex-col items-center">
+<div class="w-16 h-1 bg-primary-container mb-stack-sm"></div>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-stack-sm">Individual Athletes</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Elite players seeking independent, sophisticated career planning, brand positioning, and post-career enterprise structuring.
+                    </p>
+</div>
+<div class="bg-surface-container border border-surface-container-high p-stack-md text-center flex flex-col items-center">
+<div class="w-16 h-1 bg-primary-container mb-stack-sm"></div>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-stack-sm">Investor Groups</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Private equity and consortiums requiring pre-acquisition sporting audits, feasibility studies, and post-takeover operational roadmaps.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Confidentiality Commitment -->
+<section class="bg-surface-container py-stack-lg my-stack-lg border-y border-outline-variant">
+<div class="px-margin max-w-container-max mx-auto text-center">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-stack-sm" style="font-variation-settings: 'FILL' 1;">lock</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase mb-stack-md">The Standard of Discretion</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant italic max-w-3xl mx-auto">
+                    "Our most significant victories are those the public never witnesses. In the volatile ecosystem of elite sports, silence is a strategic asset, and trust is the ultimate currency."
+                </p>
+</div>
+</section>
+<!-- CTA -->
+<section class="px-margin max-w-container-max mx-auto py-stack-lg flex justify-center">
+<button class="bg-primary-container text-on-primary-container font-headline-md text-headline-md uppercase px-12 py-6 hover:bg-primary-fixed-dim transition-colors duration-300">
+                BEGIN YOUR ADVISORY
+            </button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg border-t border-outline-variant bg-surface-container-lowest flex flex-col items-center text-center gap-stack-md px-margin max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg text-primary uppercase">
+            ATLAS &amp; GADEIROS
+        </div>
+<nav class="flex flex-wrap justify-center gap-stack-sm md:gap-gutter">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Services</a>
+<a class="font-body-md text-body-md text-primary opacity-80 hover:opacity-100 transition-colors" href="#">Strategic Advisory</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Executive Search</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Contact</a>
+</nav>
+<div class="font-body-md text-body-md text-on-surface-variant mt-stack-md opacity-60">
+            © 2024 ATLAS &amp; GADEIROS SPORTS GROUP. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+</body></html>
